@@ -22,10 +22,8 @@
 //This route, using the GET method, seeks the method, 'home', in CreatesController class
 Route::get('/', 'CreatesController@home');
 
-//This route, using the GET method, seeks the method, 'home', in CreatesController class
-Route::get('/create', function(){
-    return view('create');
-});
+//This route, using the GET method, seeks the method, 'create', in CreatesController class
+Route::get('/create', 'CreatesController@create');
 
 //This route, using the GET method, seeks the method, 'home', in CreatesController class
 Route::post('/insert', 'CreatesController@add');

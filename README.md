@@ -181,38 +181,38 @@ DB_PASSWORD=SecurePassworD
 ## Running a test
 
 > Development or local server:
-To view a list of news articles
+To view a list of posts
 
 ```
-http://localhost/repositories/laravel5dot4CRUDAppWithZeroAuthentication/public/api/news
+http://localhost/repositories/laravel5dot4CRUDAppWithZeroAuthentication/public/api/read
 ```
 
 > Production or web server:
-To view a list of news articles
+To view a list of posts
 ```
-http://your-domain/repositories/laravel5dot4CRUDAppWithZeroAuthentication/public/api/news/23
+http://your-domain/repositories/laravel5dot4CRUDAppWithZeroAuthentication/public/
 ```
 
 
 ### Testing your laravel5dot4CRUDAppWithZeroAuthentication
 
-> List of news articles
-This test shows a paginated list of news articles. 
-To view a list of news articles:
+> List of posts
+This test shows a paginated list of posts. 
+To view a list of posts:
 ```
-http://localhost/repositories/laravel5dot4CRUDAppWithZeroAuthentication/public/api/news
+http://localhost/repositories/laravel5dot4CRUDAppWithZeroAuthentication/public/
 ```
 
-> View of a news article
-This test shows a news article. 
-To view a news article with id of 23:
+> View of a post
+This test shows a post. 
+To view a post with id of 23:
 ```
-http://localhost/repositories/laravel5dot4CRUDAppWithZeroAuthentication/public/api/news
+http://localhost/repositories/laravel5dot4CRUDAppWithZeroAuthentication/public/read/23
 ```
 
 > NOTICE:	You can test further by following the routes defined in the application. You can find the routes at:
 ```
-open-news-article/routes/api.php
+open-news-article/routes/web.php
 ```
 
 
@@ -225,17 +225,11 @@ It will be most convenient and safe to deploy the application to a live server u
 
 * [Laravel 5](https://laravel.com/5.8/docs/) - The web framework used.
 * [Faker](https://github.com/fzaninotto/Faker) - Used to generate dummy content.
-* [Postman](https://getpostman.com/) - Used to test dummy-content API.
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://github.com/aowasiu/laravel_5dot4_crud_app_with_zero_authentication/CONTRIBUTING.md) for details on code of conduct, and the process for submitting pull requests to us.
 
 
 ## Author
 
-* **Wasiu Adisa** - *Initial work* - [aowasiu](https://github.com/aowasiu)
+* **Wasiu Adisa** - [aowasiu](https://github.com/aowasiu)
 
 
 ## License
@@ -247,8 +241,6 @@ This project is licensed under the GNU Ver 3 License - see the [LICENSE.md](LICE
 
 * Thanks to my wife for holding the fort while i go clickety clack on the computer.
 * Hat tip to Taylor Otwell for creating Laravel, an awesome and beautiful web framework.
-* This project is inspired by Brad Traversy's YouTube video, Laravel 5.5 API From Scratch Using resources.
-* Thanks also to the creators of Postman.
 * Thanks to DevMarketer for steps to cloning a Git repo. (https://devmarketer.io/learn/setup-laravel-project-cloned-github-com/).
 * Thanks to Sublime HQ Pty Ltd for making Sublime Text Basic version free.
 * Thanks to Softaculous for providing AMPPS, a robust Apache software.

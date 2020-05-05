@@ -10,12 +10,27 @@ class CreatesController extends Controller
     //
     public function home()
     {
-        $articles = Article::paginate(12);
+        $articles = Article::orderBy('id', 'desc')->paginate(12);
         return view('home', ['articles' => $articles]);
+    }
+    
+    //Show all detail of Article with given ID
+    public function read($id)
+    {
+      $articles = Article::find($id);
+      return view('read', ['articles' => $articles]);
+    }
+    
+    //Show all detail of Article with given ID
+    public function create()
+    {
+      $articles = Article::count();
+      return view('create', ['articles' => $articles]);
     }
 
     //Create fresh Article in database
-    public function add(Request $request){
+    public function add(Request $request)
+    {
         $this->validate($request, [
             'title' => 'required',
             'description' => 'required'
@@ -37,7 +52,8 @@ class CreatesController extends Controller
     }
     
     //Update Article, using provided ID, in the database with given parameters
-    public function edit(Request $request, $id){
+    public function edit(Request $request, $id)
+    {
         $this->validate($request, [
             'title' => 'required',
             'description' => 'required'
@@ -51,15 +67,10 @@ class CreatesController extends Controller
             ->update($data);
         return redirect('/')->with('info', 'Article Updated successfully!');
     }
-    
-    //Show all detail of Article with given ID
-    public function read($id){
-      $articles = Article::find($id);
-      return view('read', ['articles' => $articles]);
-    }
 
     //Delete Article with given ID
-    public function delete($id){
+    public function delete($id)
+    {
       Article::where('id', $id)
       ->delete();
       return redirect('/')->with('info', 'Article Deleted successfully!');
